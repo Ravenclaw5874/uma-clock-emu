@@ -95,6 +95,10 @@ function rewriteInheritValues(inherit) {
           `Unknown ${effect} value ${value} in ${JSON.stringify(inherit)}`
         );
       }
+      // special case for Tomakomai etc
+      if (effect === 'acceleration' && [110201, 100991, 100781].includes(inherit.id)) {
+        newValue = 0.07;
+      }
       variant[effect] = newValue;
       delete inherit[effect];
     }
