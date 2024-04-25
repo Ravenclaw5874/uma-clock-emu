@@ -836,6 +836,10 @@ export default {
           } else {
             copy.inherit.acceleration = 0.05
           }
+          if ([110201, 100991, 100781].includes(skill.id))
+          {
+            copy.inherit.acceleration = 0.07
+          }
           skillType = 'acceleration'
           effectCount++
         }
