@@ -3456,9 +3456,9 @@ function normalSkillData(thiz) {
       ],
       duration: 3,
       conditions: {
-        phase: ">=2",
         distance_type: 3,
-        is_last_straight: 1,
+        is_lastspurt: 1,
+        corner: 0
       },
     },
     {
