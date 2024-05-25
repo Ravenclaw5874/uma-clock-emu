@@ -2211,6 +2211,7 @@ function normalSkillData(thiz) {
           id: 104102211,
           holder: 104102,
           name: "驀進！爆進！バクシーン！",
+          speedWithDecel: 0.35,
           duration: 4,
         },
         {
