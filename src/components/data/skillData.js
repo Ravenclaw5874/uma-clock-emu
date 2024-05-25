@@ -1351,7 +1351,7 @@ function normalSkillData(thiz) {
           rarity: "evo",
           id: 103602111,
           holder: 103602,
-          name: "Gluttony’s Grip",
+          name: "Gluttony's Grip",
           heal: 550,
         },
         { rarity: "rare", id: 201221, name: "スタミナグリード", heal: 350 },
@@ -3632,7 +3632,7 @@ function normalSkillData(thiz) {
           rarity: "evo",
           id: 105301211,
           holder: 105301,
-          name: "押忍ッ！気合十分ッス！",
+          name: "押忍ッ！気合十分っス！",
           targetSpeed: 0.35,
           acceleration: 0.2,
         },
@@ -6786,7 +6786,7 @@ const uniqueSkillData = (thiz) => [
   {
     id: 100261,
     holder: 102601,
-    name: "G00 1st．F∞;",
+    name: "G00 1st.F∞;",
     targetSpeed: 0.45,
     duration: 5,
     conditions: {
@@ -7079,7 +7079,7 @@ const uniqueSkillData = (thiz) => [
   {
     id: 100231,
     holder: 102301,
-    name: "∴win Q．E．D．",
+    name: "∴win Q.E.D.",
     duration: 5,
     type: "speed",
     invokes: [
@@ -7223,7 +7223,7 @@ const uniqueSkillData = (thiz) => [
   {
     id: 100191,
     holder: 101901,
-    name: "尊み☆ﾗｽﾄｽﾊﾟ━━(ﾟ∀ﾟ)━━ﾄ!",
+    name: "尊み☆ﾗｽﾄｽﾊﾟ—(ﾟ∀ﾟ)—ﾄ!",
     targetSpeed: 0.35,
     duration: 5,
     tooltip: "フェイズ2のどこか発動として扱う",
@@ -7359,7 +7359,7 @@ const uniqueSkillData = (thiz) => [
   {
     id: 100401,
     holder: 104001,
-    name: "KEEP IT REAL．",
+    name: "KEEP IT REAL.",
     acceleration: 0.3,
     duration: 6,
     tooltip: "50%地点で即発動として扱う",
@@ -7462,7 +7462,7 @@ const uniqueSkillData = (thiz) => [
   {
     id: 100281,
     holder: 102801,
-    name: "I’M☆FULL☆SPEED!!",
+    name: "I'M☆FULL☆SPEED!!",
     targetSpeed: 0.25,
     acceleration: 0.3,
     duration: 5,
@@ -8011,7 +8011,7 @@ const uniqueSkillData = (thiz) => [
   {
     id: 100421,
     holder: 104201,
-    name: "『I’m possible』",
+    name: "『I'm possible』",
     targetSpeed: 0.45,
     duration: 5,
     tooltip: "2～9位、先頭と5m以内扱い",
@@ -8046,7 +8046,7 @@ const uniqueSkillData = (thiz) => [
   {
     id: 100871,
     holder: 108701,
-    name: "silent letter",
+    name: "Silent letter",
     targetSpeed: 0.25,
     acceleration: 0.3,
     duration: 5,
@@ -8132,7 +8132,7 @@ const uniqueSkillData = (thiz) => [
   {
     id: 110091,
     holder: 100902,
-    name: "Queen’s Lumination",
+    name: "Queen's Lumination",
     targetSpeed: 0.35,
     duration: 6,
     tooltip: "0.35のみ",
@@ -8581,7 +8581,7 @@ const uniqueSkillData = (thiz) => [
   {
     id: 110481,
     holder: 104802,
-    name: "GALmem．ふぉーえば♪",
+    name: "GALmem.ふぉーえば♪",
     targetSpeed: 0.3,
     conditions: {
       distance_rate: [40, 50],
@@ -8782,7 +8782,7 @@ const uniqueSkillData = (thiz) => [
   {
     id: 110361,
     holder: 103602,
-    name: "…found you．",
+    name: "...found you.",
     duration: 5,
     targetSpeed: 0.45,
     conditions: {
