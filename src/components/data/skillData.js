@@ -8581,7 +8581,7 @@ const uniqueSkillData = (thiz) => [
   {
     id: 110481,
     holder: 104802,
-    name: "GALmem.ふぉーえば♪",
+    name: "GALmem．ふぉーえば♪",
     targetSpeed: 0.3,
     conditions: {
       distance_rate: [40, 50],
