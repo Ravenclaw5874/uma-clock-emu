@@ -352,7 +352,7 @@
           <td>{{ nonMaxSpurtSPLack }}</td>
         </tr>
       </table>
-      <div style="display: none;" id="allRaceTime">{{allRaceTime}}</div>
+      <div><input type="hidden" id="allRaceTime" :value="allRaceTime.join(', ')"></div>
     </div>
     <el-divider />
     <h3>

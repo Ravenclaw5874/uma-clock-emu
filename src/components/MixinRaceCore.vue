@@ -445,7 +445,7 @@ export default {
     },
     //모든 랩타임 출력용
     allRaceTime() {
-      return this.emulations.map(e => Math.floor(e.raceTime * 1000) / 1000).join(', ');
+      return this.emulations.map(e => Math.floor(e.raceTime * 1000) / 1000);
     },
     avgRaceTime() {
       return this.calcAvg("all", "raceTime");
