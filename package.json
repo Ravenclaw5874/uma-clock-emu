@@ -15,6 +15,7 @@
     "element-ui": "^2.15.2",
     "mime-types": "^2.1.32",
     "vue": "^2.6.11",
+    "vue-adfit-component": "^1.0.2",
     "vue-chartjs": "^3.5.1",
     "vue-google-adsense": "^1.9.3",
     "vue-gtag": "^1.16.1",

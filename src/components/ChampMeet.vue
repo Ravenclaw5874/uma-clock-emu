@@ -1,12 +1,16 @@
 <template>
   <div class="main-frame">
     <p>
-      <Adsense
+      <!--<Adsense
         v-if="production"
         data-ad-client="ca-pub-4611969396217909"
         data-ad-slot="6969023753"
       >
-      </Adsense>
+      </Adsense>-->
+      <adfit-banner
+        v-if="production"
+        data-ad-unit="DAN-C9EPw6PZoltqZXj6">
+      </adfit-banner>
     </p>
     <el-form class="input-form" :inline="true">
       <el-form-item>
@@ -287,12 +291,16 @@
       <ExecuteBlock ref="executeBlock" :exec-function="this.exec" />
     </el-form>
     <el-divider />
-    <Adsense
+    <!--<Adsense
       v-if="production"
       data-ad-client="ca-pub-4611969396217909"
       data-ad-slot="6969023753"
     >
-    </Adsense>
+    </Adsense>-->
+    <adfit-banner
+        v-if="production"
+        data-ad-unit="DAN-C9EPw6PZoltqZXj6">
+    </adfit-banner>
     <div>
       <h3>{{ $t("message.emulationResult") }}</h3>
       <table border="1" class="emulation-result">

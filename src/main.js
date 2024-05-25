@@ -3,6 +3,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import VueGtag from "vue-gtag"
 import Ads from 'vue-google-adsense'
+import AdFit from 'vue-adfit-component'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 
@@ -19,6 +20,7 @@ Vue.use(VueGtag, {
 
 Vue.use(require('vue-script2'))
 Vue.use(Ads.Adsense)
+Vue.use(AdFit.Banner)
 Vue.use(VueRouter)
 Vue.use(PluginUtils)
 
