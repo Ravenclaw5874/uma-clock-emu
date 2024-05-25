@@ -9,6 +9,7 @@
       </Adsense>-->
       <adfit-banner
         v-if="production"
+        class="kakao_ad_area"
         data-ad-unit="DAN-C9EPw6PZoltqZXj6">
       </adfit-banner>
     </p>
@@ -299,7 +300,8 @@
     </Adsense>-->
     <adfit-banner
         v-if="production"
-        data-ad-unit="DAN-C9EPw6PZoltqZXj6">
+        class="kakao_ad_area"
+        data-ad-unit="DAN-1Gtqq8rtCdn36qKa">
     </adfit-banner>
     <div>
       <h3>{{ $t("message.emulationResult") }}</h3>

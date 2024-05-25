@@ -42,8 +42,9 @@
                  data-ad-slot="6969023753">
         </Adsense>-->
         <adfit-banner
-          v-if="production"
-          data-ad-unit="DAN-C9EPw6PZoltqZXj6">
+          v-if="$parent.production"
+          class="kakao_ad_area"
+          data-ad-unit="DAN-vJ9rL4rqJ1hzbVdW">
         </adfit-banner>
       </p>
     </el-dialog>
