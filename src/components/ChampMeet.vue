@@ -352,6 +352,7 @@
           <td>{{ nonMaxSpurtSPLack }}</td>
         </tr>
       </table>
+      <div style="display: none;" id="allRaceTime">{{allRaceTime}}</div>
     </div>
     <el-divider />
     <h3>

@@ -443,6 +443,10 @@ export default {
         return this.emulations[this.emulations.length - 1].raceTime;
       }
     },
+    //모든 랩타임 출력용
+    allRaceTime() {
+      return this.emulations.map(e => Math.floor(e.raceTime * 1000) / 1000).join(', ');
+    },
     avgRaceTime() {
       return this.calcAvg("all", "raceTime");
     },
