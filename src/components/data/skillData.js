@@ -6642,7 +6642,7 @@ function normalSkillData(thiz) {
 
 const uniqueSkillData = (thiz) => [
   {
-    id: 0,
+    id: 1,
     name: "  なし／発動しない",
     noInherit: true,
     check: function () {

@@ -1081,7 +1081,6 @@ export default {
       });
     },
     saveUmaToObject() {
-      console.log('세이브:',this);
       const hasSkillIds = [];
       for (const type of this.types) {
         for (const section of this.raritySections) {
@@ -1117,7 +1116,6 @@ export default {
       }
     },
     loadUmaFromObject(u) {
-      console.log('로드:',u);
       if (u.version == null || u.version < UMA_OBJ_VERSION) {
         return false;
       }
