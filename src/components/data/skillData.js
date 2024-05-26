@@ -601,7 +601,7 @@ function normalSkillData(thiz) {
           passiveStamina: 80,
         },
       ],
-      tooltip: "発動率2/9として扱う(チャンピオンズミーティング基準)",
+      tooltip: "発動率1/9として扱う(チャンピオンズミーティング基準)",
       triggerRate: 0.1111111,
     },
     {
