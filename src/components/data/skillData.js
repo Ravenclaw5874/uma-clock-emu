@@ -602,7 +602,7 @@ function normalSkillData(thiz) {
         },
       ],
       tooltip: "発動率2/9として扱う(チャンピオンズミーティング基準)",
-      triggerRate: 0.2222222,
+      triggerRate: 0.1111111,
     },
     {
       variants: [
