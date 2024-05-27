@@ -37,11 +37,11 @@ if (localStorage.getItem("lang") !== null) {
   locale_lang = window.navigator.userLanguage || window.navigator.language;
   lang = locale_lang.replace("-", "");
 
-  // if locale language is not in setting, use japanese as default
+  // if locale language is not in setting, use korean as default
   if (lang_array.includes(lang)) {
     locale = lang;
   } else {
-    locale = "ja";
+    locale = "ko";
   }
 }
 
