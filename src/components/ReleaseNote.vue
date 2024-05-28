@@ -131,6 +131,10 @@ export default {
           content: '어기여차, Do ya 수정',
           timestamp: '2024-05-28'
         },
+        {
+          content: '진수 시리즈 추가',
+          timestamp: '2024-05-28'
+        },
       ]
     }
   }
