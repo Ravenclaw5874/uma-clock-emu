@@ -3995,7 +3995,12 @@ function normalSkillData(thiz) {
           targetSpeed: 0.35,
           duration: 4,
         },
-        { rarity: "rare", id: 202471, name: "猛追", targetSpeed: 0.35 },
+        {
+          rarity: "rare",
+          id: 202471,
+          name: "猛追",
+          targetSpeed: 0.35
+        },
         {
           rarity: "normal",
           id: 202472,
@@ -4016,7 +4021,12 @@ function normalSkillData(thiz) {
           targetSpeed: 0.35,
           duration: 4,
         },
-        { rarity: "rare", id: 202501, name: "遮二無二", targetSpeed: 0.35 },
+        {
+          rarity: "rare",
+          id: 202501,
+          name: "遮二無二",
+          targetSpeed: 0.35
+        },
         {
           rarity: "normal",
           id: 202502,
@@ -6635,6 +6645,122 @@ function normalSkillData(thiz) {
         running_style: 2,
         distance_type: 4,
         phase_firstquarter_random: 2,
+      },
+    },
+    {
+      variants: [
+        {
+          rarity: "rare",
+          id: 210081,
+          name: "限界の先へ",
+          targetSpeed: 0.42,
+        },
+        {
+          rarity: "normal",
+          id: 210082,
+          name: "前だけ見据えて",
+          targetSpeed: 0.18,
+        },
+      ],
+      duration: 2.4,
+      conditions: {
+        is_lastspurt: 1,
+        phase_random: 3,
+      },
+      tooltip: "効果1.2倍(1100↑)として扱う",
+    },
+    {
+      variants: [
+        {
+          rarity: "normal",
+          id: 210091,
+          name: "レースの真髄・速",
+          targetSpeed: 0.15,
+        },
+      ],
+      duration: 2,
+      conditions: {
+        phase_laterhalf_random: 1,
+      },
+    },
+    {
+      variants: [
+        {
+          rarity: "normal",
+          id: 210101,
+          name: "レースの真髄・体",
+          targetSpeed: 0.25,
+          heal: -200,
+        },
+      ],
+      duration: 3,
+      conditions: {
+        phase_random: 3,
+        hp_per: ">=2",
+        is_lastspurt: 1,
+      },
+    },
+    {
+      variants: [
+        {
+          rarity: "normal",
+          id: 210111,
+          name: "レースの真髄・力",
+          targetSpeed: 0.15,
+        },
+      ],
+      duration: 4,
+      conditions: {
+        phase: 3,
+        is_lastspurt: 1,
+      },
+    },
+    {
+      variants: [
+        {
+          rarity: "normal",
+          id: 210121,
+          name: "レースの真髄・根",
+          acceleration: 0.2,
+        },
+      ],
+      duration: 1.2,
+      tooltip: "最終直線ランダム発動として扱う",
+      conditions: {
+        is_finalstraight_random: 1,
+      },
+    },
+    {
+      variants: [
+        {
+          rarity: "normal",
+          id: 210131,
+          name: "レースの真髄・賢",
+          targetSpeed: 0.15,
+        },
+      ],
+      duration: 2,
+      tooltip: "後半即発動として扱う",
+      conditions: {
+        //activate_count_later_half 구현 안되어있어서 대체
+        distance_rate: ">=50",
+      },
+    },
+    {
+      variants: [
+        {
+          rarity: "normal",
+          id: 210141,
+          name: "レースの真髄・心",
+          passiveStamina: 40,
+          passiveGuts: 40,
+          passiveWisdom: 40,
+        },
+      ],
+      //인게임은 지능 발동인데 얘만 예외처리 하는법 몰라
+      tooltip: "確定発動として扱う",
+      conditions: {
+        motivation: ">=4"
       },
     },
     // End of normal skills
