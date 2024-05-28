@@ -2004,6 +2004,7 @@ function normalSkillData(thiz) {
             },
             {
               targetSpeed: 0.45,
+              duration: 3,
             },
           ],
           type: "speed",
@@ -7604,20 +7605,45 @@ const uniqueSkillData = (thiz) => [
       return thiz.isInFinalStraight();
     },
   },
+  // {
+  //   id: 100681,
+  //   holder: 106801,
+  //   name: "勝ち鬨ワッショイ！",
+  //   targetSpeed: 0.25,
+  //   acceleration: 0.3,
+  //   duration: 5,
+  //   tooltip: "1～2位",
+  //   check: function () {
+  //     return (
+  //       (thiz.isPhase(2) && thiz.isStraightFrontType(2)) ||
+  //       (thiz.isInInterval(0.5, 1) && thiz.isInCorner(null, 3))
+  //     );
+  //   },
+  // },
   {
     id: 100681,
     holder: 106801,
     name: "勝ち鬨ワッショイ！",
-    targetSpeed: 0.25,
-    acceleration: 0.3,
     duration: 5,
     tooltip: "1～2位",
-    check: function () {
-      return (
-        (thiz.isPhase(2) && thiz.isStraightFrontType(2)) ||
-        (thiz.isInInterval(0.5, 1) && thiz.isInCorner(null, 3))
-      );
-    },
+    invokes: [
+      {
+        targetSpeed: 0.25,
+        acceleration: 0.3,
+        conditions: {
+          phase: 2,
+          straight_front_type: 2,
+        },
+      },
+      {
+        targetSpeed: 0.25,
+        conditions: {
+          distance_rate: ">=50",
+          corner: 3,
+        },
+      },
+    ],
+    type: "composite",
   },
   // {
   //   id: 10621,
@@ -7720,14 +7746,26 @@ const uniqueSkillData = (thiz) => [
     id: 110201,
     holder: 102002,
     name: "Do Ya Breakin!",
-    targetSpeed: 0.35,
-    acceleration: 0.2,
     duration: 5,
-    conditions: {
-      phase: ">=2",
-      corner: 0,
-      straight_front_type: 2,
-    },
+    invokes: [
+      {
+        targetSpeed: 0.35,
+        acceleration: 0.2,
+        conditions: {
+          phase: ">=2",
+          corner: 0,
+          straight_front_type: 2,
+        },
+      },
+      {
+        targetSpeed: 0.35,
+        conditions: {
+          phase: ">=2",
+          corner: 0,
+        },
+      },
+    ],
+    type: "composite"
   },
   {
     id: 100511,
