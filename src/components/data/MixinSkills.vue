@@ -222,16 +222,7 @@ export default {
           continue;
         }
 
-        // 進化スキルはエミュ種類以外では無条件で表示
-        if (skill.rarity === "evo") {
-          if (skill.holder == null) {
-            console.error(`No holder in ${JSON.stringify(skill)}`);
-          }
-          if (skill.holder === uqHolder) {
-            ret.evo.push(skill);
-          }
-          continue;
-        }
+        
 
         if (!this.isDistanceType(skill.conditions?.distance_type)) {
           continue;
@@ -252,6 +243,17 @@ export default {
           continue;
         }
         if (!this.isGroundCondition(skill.conditions?.ground_condition)) {
+          continue;
+        }
+        // 進化スキルはエミュ種類以外では無条件で表示
+        // 어차피 무조건 표시해봤자 시뮬에서 안터지는데 의미 있음?
+        if (skill.rarity === "evo") {
+          if (skill.holder == null) {
+            console.error(`No holder in ${JSON.stringify(skill)}`);
+          }
+          if (skill.holder === uqHolder) {
+            ret.evo.push(skill);
+          }
           continue;
         }
         // コースと馬場状態指定はチャンミのみ
@@ -404,7 +406,7 @@ export default {
               return null;
             }
           } else {
-          return parseInt(value) === 5 - parseInt(thiz.umaStatus.condition);
+            return parseInt(value) === 5 - parseInt(thiz.umaStatus.condition);
           }
         case "hp_per":
           if (value.startsWith(">=")) {
@@ -1144,9 +1146,8 @@ export default {
       for (const effect of this.effects) {
         if (copy[effect]) {
           if (!copy.tooltip) copy.tooltip = "";
-          copy.tooltip += ` | ${effect}: ${
-            Math.round(copy[effect] * 100) / 100
-          }`;
+          copy.tooltip += ` | ${effect}: ${Math.round(copy[effect] * 100) / 100
+            }`;
         }
       }
 
