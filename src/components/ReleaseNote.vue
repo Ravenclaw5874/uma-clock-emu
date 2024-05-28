@@ -127,6 +127,10 @@ export default {
           content: '大逃げを実装',
           timestamp: '2022-09-28'
         },
+        {
+          content: '어기여차, Do ya 수정',
+          timestamp: '2024-05-28'
+        },
       ]
     }
   }
