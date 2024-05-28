@@ -390,7 +390,22 @@ export default {
       const thiz = this;
       switch (cond) {
         case "motivation":
+          if (typeof value === "string") {
+            if (value.startsWith(">=")) {
+              return 5 - parseInt(thiz.umaStatus.condition) >= parseInt(value.substring(2));
+            } else if (value.startsWith(">")) {
+              return 5 - parseInt(thiz.umaStatus.condition) > parseInt(value.substring(1));
+            } else if (value.startsWith("<=")) {
+              return 5 - parseInt(thiz.umaStatus.condition) <= parseInt(value.substring(2));
+            } else if (value.startsWith("<")) {
+              return 5 - parseInt(thiz.umaStatus.condition) < parseInt(value.substring(1));
+            } else {
+              console.error("Unknown motivation value", value);
+              return null;
+            }
+          } else {
           return parseInt(value) === 5 - parseInt(thiz.umaStatus.condition);
+          }
         case "hp_per":
           if (value.startsWith(">=")) {
             return () =>
