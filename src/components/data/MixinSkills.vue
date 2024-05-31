@@ -624,7 +624,7 @@ export default {
           checks.push(res);
         } else if (Array.isArray(res)) {
           if (res.length > 0) {
-            if (res[0].start) {
+            if (res[0].start !== undefined) {
               // Randoms
               skill.randoms = res;
               checks.push((startPosition) =>
@@ -634,7 +634,7 @@ export default {
               // Multiple conditions
               checks.push(...res);
             } else {
-              console.error("Unknown res array", cond, res);
+              console.error("Unknown res array", skill, cond, res);
             }
           } else {
             // Empty random array = won't trigger
