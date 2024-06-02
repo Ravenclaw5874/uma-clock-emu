@@ -112,6 +112,12 @@
     "mood3": "저조",
     "mood4": "최악",
 
+    "raceType0": "단거리",
+    "raceType1": "마일",
+    "raceType2": "중거리",
+    "raceType3": "장거리",
+    "raceType4": "더트",
+
     "uniqueLv0Hint": "(Lv0에서 불발 취급)",
     "evoSkill": "진화 스킬",
     "evoHint": "(고유 선택으로 대응하는 진화 스킬을 표시)"
