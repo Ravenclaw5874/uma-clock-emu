@@ -560,7 +560,7 @@ export default {
             return () => thiz.currentPhase == value;
           }
         case "is_finalcorner":
-          return () => thiz.isInFinalStraight() || thiz.isInFinalCorner();
+          return () => thiz.isFinalCorner();
         case "is_finalcorner_laterhalf":
           return () => thiz.isInFinalCorner(null, { start: 0.5, end: 1 });
         case "corner":
@@ -1008,12 +1008,32 @@ export default {
       if (!position) {
         position = this.position;
       }
+      /* todo : 2.5주년에 최종 직선 조건문이 "is_finalcorner==1 &corner==0" -> "is_last_straight==1" 으로 변경되므로 아래껄 지우고 이걸로 바꾸기.
+
       const lastStraight =
         this.trackDetail.straights[this.trackDetail.straights.length - 1];
       if (!lastStraight) {
         return false;
       }
       return position >= lastStraight.start;
+      */
+      const fc = this.trackDetail.corners[this.trackDetail.corners.length - 1]
+      if (!fc) {
+        // 千直、最終直線は仕様上存在しないことになっている
+        return false
+      }
+      return position > this.cornerEnd(fc)
+    },
+    //replace isInFinalCorner() || isInFinalStraight(). is_finalcorner should not activate when finalcorner doesn't exist.
+    isFinalCorner(position) {
+      if (!position) {
+        position = this.position;
+      }
+      const fc = this.trackDetail.corners[this.trackDetail.corners.length - 1];
+      if (!fc) {
+        return false;
+      }
+      return position >= fc.start;
     },
     isContainsRemainingDistance(remain, startPosition) {
       return (

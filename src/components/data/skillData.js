@@ -7425,9 +7425,9 @@ const uniqueSkillData = (thiz) => [
     duration: 4,
     tooltip:
       "順位<=5及び<=50%は満たしていると見なす。どの脚質でも最速発動扱い。",
-    check: function () {
-      return thiz.isInFinalCorner() || thiz.isInFinalStraight();
-    },
+    conditions: {
+      is_finalcorner: 1,
+    }
   },
   {
     id: 100101,
@@ -7864,9 +7864,9 @@ const uniqueSkillData = (thiz) => [
     name: "Ravissant",
     targetSpeed: 0.45,
     duration: 4,
-    check: function () {
-      return thiz.isInFinalCorner() || thiz.isInFinalStraight();
-    },
+    conditions: {
+      is_finalcorner: 1,
+    }
   },
   {
     id: 110201,
@@ -7978,7 +7978,7 @@ const uniqueSkillData = (thiz) => [
     duration: 5,
     tooltip: "2～4位。加速力は残り401m以上がある場合（自動で判断していない）",
     check: function () {
-      return thiz.currentPhase >= 2 && thiz.isInFinalCorner();
+      return thiz.currentPhase >= 2 && thiz.isFinalCorner();
     },
   },
   {
