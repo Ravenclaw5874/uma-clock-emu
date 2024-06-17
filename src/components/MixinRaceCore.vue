@@ -1427,7 +1427,7 @@ export default {
             annotations.push({
               type: "line",
               label: {
-                content: "脚色十分",
+                content: this.$t("chart.releasePower"),
                 position: "top",
                 enabled: true,
                 yAdjust: skillYAdjust,
