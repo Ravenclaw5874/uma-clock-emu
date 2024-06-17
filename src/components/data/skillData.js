@@ -3528,13 +3528,13 @@ function normalSkillData(thiz) {
         },
         {
           rarity: "rare",
-          id: 202022,
+          id: 202021,
           name: "強攻策",
           targetSpeed: 0.25,
         },
         {
           rarity: "normal",
-          id: 202021,
+          id: 202022,
           name: "早仕掛け",
           targetSpeed: 0.05,
         },
