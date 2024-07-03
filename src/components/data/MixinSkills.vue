@@ -16,6 +16,7 @@ const effects = [
   "passiveWisdom",
   "temptationRate",
   "startDelay",
+  "duration",
 ];
 
 const inheritMap = {
@@ -71,6 +72,9 @@ function toInheritValues(invoke) {
         );
       }
       ret[effect] = newValue;
+    }
+    else if (effect === "duration" && invoke[effect]) {
+      ret[effect] = invoke[effect] * 0.6;
     }
   }
   return ret;
