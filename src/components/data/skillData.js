@@ -6265,7 +6265,7 @@ function normalSkillData(thiz) {
         {
           rarity: "evo",
           holder: 110501,
-          id: 107601211,
+          id: 110501211,
           name: "星の海を駆けて",
           speedWithDecel: 0.35,
           duration: 4,
